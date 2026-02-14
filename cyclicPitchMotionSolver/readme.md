@@ -32,7 +32,6 @@ To simulate the cyclic pitch motion of rotor blades, the **`cyclicPitchMotion`**
 
 The solver calculates the amplitude ($A$) and phase angle ($\phi$) based on the lateral and longitudinal cyclic pitch requirements. These values are then applied to the OpenFOAM solver as follows:
 
-**Table 1. `cyclicPitchMotion` Parameter Comparison**
 ### Table 1. `cyclicPitchMotion` Parameter Comparison
 
 | Feature | `oscillatingRotatingMotion` (Base) | `cyclicPitchMotion` (Custom) |

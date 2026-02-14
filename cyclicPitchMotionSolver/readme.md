@@ -1,5 +1,6 @@
 # OpenFOAM cyclicPitchMotion Solver
-
+[![Video Title](https://img.youtube.com/vi/Fds-anIRUr8/0.jpg)](https://www.youtube.com/watch?v=Fds-anIRUr8)
+## 1. Definition of Rotor Pitch Motion
 ## 1. Definition of Rotor Pitch Motion
 
 In helicopter aerodynamics, rotor control is achieved through two primary mechanisms: **collective** and **cyclic** pitch. These adjustments allow the aircraft to transition between vertical and directional flight.

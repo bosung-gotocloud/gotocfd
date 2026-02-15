@@ -127,6 +127,6 @@ Parameter Breakdown
 ### Note for Meshing
 ​When preparing your simulation mesh, please adhere to the following:
 
-​Zero-Pitch Mesh: The initial mesh geometry must be created with a pitch angle of 0°.
-​Initial Transformation: At simulation time t=0, the solver automatically calculates the transformation $\theta(0) = \theta_0 + A\sin(\omega t)$ and rotates the mesh accordingly.
-​Warning: If the mesh is pre-rotated to $\theta_0$ in the CAD/Meshing stage, the solver will apply the collective offset again, resulting in an incorrect initial pitch.
+- ​Zero-Pitch Mesh: The initial mesh geometry must be created with a pitch angle of 0°.
+- ​Initial Transformation: At simulation time t=0, the solver automatically calculates the transformation $\theta(0) = \theta_0 + A\sin(\omega t)$ and rotates the mesh accordingly.
+- ​Warning: If the mesh is pre-rotated to $\theta_0$ in the CAD/Meshing stage, the solver will apply the collective offset again, resulting in an incorrect initial pitch.

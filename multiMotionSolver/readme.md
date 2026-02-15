@@ -118,7 +118,7 @@ dynamicMultiMotionSolverFvMeshCoeffs
                     cyclicPitchMotionCoeffs
                     {
                         origin    (0 0 0);
-                        axis      (1 0 0);   
+                        axis      (1 0 0);   // Pitch motion axis at time = 0
                         omega     209.4395;  
                         amplitude 3.60555;   // Result of sqrt(3^2 + 2^2)
                         phase     3.7296;    // Result of atan2(-2, -3)
@@ -168,5 +168,6 @@ Technical Item Descriptions are as follow:
 
 - `alpha0`: Represents the Collective Pitch ($\theta_0$), the constant baseline angle of the blades.
 
-
 - `amplitude` & `phase`: These parameters define the Cyclic Pitch, derived from the lateral and longitudinal control inputs to determine the tilt and direction of the rotor thrust.
+
+- `​axis`: This defines the local axis of the pitching motion at the start of the simulation (t = 0). As the simulation progresses, the solver automatically calculates the current orientation of this axis by applying the primary rotation (hub motion) to the initial vector.

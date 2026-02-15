@@ -1,0 +1,95 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      dynamicMeshDict;
+}
+
+dynamicFvMesh dynamicMultiMotionSolverFvMesh;
+
+rotation
+{
+    solidBodyMotionFunction  rotatingMotion;
+    rotatingMotionCoeffs
+    {
+        origin (0 0 0);
+        axis (0 0 1);
+        omega 209.4395; 
+    }
+}
+
+dynamicMultiMotionSolverFvMeshCoeffs
+{
+    rotorzone
+    {
+        solver          solidBody;
+        cellZone        rotorzone;
+        solidBodyCoeffs
+        {
+            $rotation;
+        }
+    }
+
+    bladezone000
+    {
+        cellZone        bladezone000;
+        solver          solidBody;
+        solidBodyCoeffs
+        {
+            solidBodyMotionFunction multiMotion;
+            multiMotionCoeffs
+            {
+                rotorRotation { $rotation; }
+                pitchMotion
+                {
+                    solidBodyMotionFunction cyclicPitchMotion;
+                    cyclicPitchMotionCoeffs
+                    {
+                        origin    (0 0 0);
+                        axis      (1 0 0);   
+                        omega     209.4395;  
+                        amplitude 3.60555;   // Result of sqrt(3^2 + 2^2)
+                        phase     3.7296;    // Result of atan2(-2, -3)
+                        alpha0    10;        // Collective 10 degrees
+                    }
+                }
+            }
+        }
+    }
+
+    bladezone180
+    {
+        cellZone        bladezone180;
+        solver          solidBody;
+        solidBodyCoeffs
+        {
+            solidBodyMotionFunction multiMotion;
+            multiMotionCoeffs
+            {
+                rotorRotation { $rotation; }
+                pitchMotion
+                {
+                    solidBodyMotionFunction cyclicPitchMotion;
+                    cyclicPitchMotionCoeffs
+                    {
+                        origin    (0 0 0);
+                        axis      (-1 0 0);  
+                        omega     209.4395;
+                        amplitude 3.60555;
+                        phase     0.5880;    // 3.7296 - PI
+                        alpha0    10;
+                    }
+                }
+            }
+        }
+    }
+}
+// ************************************************************************* //

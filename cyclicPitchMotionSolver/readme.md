@@ -15,6 +15,7 @@ In helicopter aerodynamics, rotor control is achieved through two primary mechan
 ### Mathematical Formulation
 
 The pitch angle for each blade is formulated with respect to the azimuth angle ($\psi$) as follows:
+
 $$\theta(\psi) = \theta_0 - \theta_{1c} \cos(\psi) - \theta_{1s} \sin(\psi)$$
 
 * **$\theta_0$**: Collective pitch

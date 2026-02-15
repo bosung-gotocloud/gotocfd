@@ -43,7 +43,7 @@ The conversion from the control inputs to the solver parameters is as follows:
 
 - Cyclic Amplitude ($A$): $\sqrt{3^2 + 2^2} = \mathbf{3.60555^\circ}$
 
-- Phase ($\phi$): $\operatorname{atan2}(-2, -3) \approx \mathbf{3.7296}$ rad (approx. $213.69^\circ$)
+- Phase ($\phi$): $atan2(-2, -3) \approx \mathbf{3.7296}$ rad (approx. $213.69^\circ$)
 
 ### 3. Critical Pitch Angles & Azimuth Positions
 
@@ -167,5 +167,6 @@ Technical Item Descriptions are as follow:
 - `cyclicPitchMotion`: A specific solver designed for rotorcraft where the pitch angle varies sinusoidally relative to the rotational azimuth.
 
 - `alpha0`: Represents the Collective Pitch ($\theta_0$), the constant baseline angle of the blades.
+
 
 - `amplitude` & `phase`: These parameters define the Cyclic Pitch, derived from the lateral and longitudinal control inputs to determine the tilt and direction of the rotor thrust.

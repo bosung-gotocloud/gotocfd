@@ -124,7 +124,7 @@ Parameter Breakdown
 - `omega`: Corresponds to the rotor's rotational speed. For example, `104 rad/s` equates to approximately `1000 RPM`.
 - `phase`: Determines the orientation of the tilt (e.g., whether the maximum pitch occurs at the 12 o'clock or 3 o'clock position).
 
-### Note for Meshing
+### 5. Note for Meshing
 ​When preparing your simulation mesh, please adhere to the following:
 
 - `​Zero-Pitch Mesh`: The initial mesh geometry must be created with a pitch angle of 0°.

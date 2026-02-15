@@ -46,6 +46,7 @@ The solver calculates the amplitude ($A$) and phase angle ($\phi$) based on the 
 | **Phase ($\phi$)** | N/A | **Phase angle** |
 
 The conversion from physical pitch requirements to solver parameters is defined by the following equations:
+
 $$\theta(t) = \theta_0 + A \sin(\omega t + \phi)$$
 
 $$A = \sqrt{\theta_{1c}^2 + \theta_{1s}^2}$$

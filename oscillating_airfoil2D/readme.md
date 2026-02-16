@@ -1,6 +1,6 @@
 # 2D Oscillating NACA 0012 Airfoil Simulation
 
-The flow field around an oscillating airfoil post-stall is characterized by significant flow separation and the development of dynamic stall vortices [1] [2]. Oscillatating rotating motion은 OpenFOAM의 [cyclicPitchMotion](https://github.com/bosung-gotocloud/gotocfd/tree/main/cyclicPitchMotionSolverd) solver로 모사하였다.
+The flow field surrounding an oscillating airfoil in deep stall is characterized by significant flow separation and the periodic shedding of dynamic stall vortices [1].
 
 [![Video Title](https://img.youtube.com/vi/Fds-anIRUr8/0.jpg)](https://www.youtube.com/watch?v=Fds-anIRUr8)
 
@@ -36,5 +36,6 @@ mpirun -np 8 pimpleFoam -parallel
 
 
 [1] W.J. McCroskey et al., "An Experimental Study of Dynamic Stall on Advanced Airfoil Sections," Vol. 1-3, NASA TM-84245, 1982
+
 
 [2] Lee, B., Lee, S. and Lee, D. H., “Modification of SST Turbulence Model for Computation of Oscillating Airfoil Flows,“ Journal of computational fluids engineering, Vol. 4, No. 3, 1999, pp. 44~51.

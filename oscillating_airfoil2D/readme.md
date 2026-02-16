@@ -19,6 +19,7 @@ The oscillating and rotating motion of the airfoil is modeled using the custom [
 * **Time Step ($\Delta t$):** $0.00107 \text{ s}$ (200 steps per oscillation period).
 * **Duration:** 10 full oscillation periods to achieve a periodic steady state.
 * **Mesh Resolution:** First cell height is $1 \times 10^{-4} \text{ m}$ to resolve the boundary layer.
+* **Turbulence Model:** Spalart–Allmaras turbulence model
 
 ---
 
@@ -39,5 +40,6 @@ mpirun -np 8 pimpleFoam -parallel
 
 
 [2] Lee, B., Lee, S. and Lee, D. H., “Modification of SST Turbulence Model for Computation of Oscillating Airfoil Flows,“ Journal of computational fluids engineering, Vol. 4, No. 3, 1999, pp. 44~51.
+
 
 

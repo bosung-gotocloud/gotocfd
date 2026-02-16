@@ -1,6 +1,6 @@
 # 2D Oscillating NACA 0012 Airfoil Simulation
 
-The flow field surrounding an oscillating airfoil in deep stall is characterized by significant flow separation and the periodic shedding of dynamic stall vortices [1].
+The flow field surrounding an oscillating airfoil in deep stall is characterized by significant flow separation and the periodic shedding of dynamic stall vortices [1] [2].
 
 [![Video Title](https://img.youtube.com/vi/Fds-anIRUr8/0.jpg)](https://www.youtube.com/watch?v=Fds-anIRUr8)
 
@@ -39,4 +39,5 @@ mpirun -np 8 pimpleFoam -parallel
 
 
 [2] Lee, B., Lee, S. and Lee, D. H., “Modification of SST Turbulence Model for Computation of Oscillating Airfoil Flows,“ Journal of computational fluids engineering, Vol. 4, No. 3, 1999, pp. 44~51.
+
 

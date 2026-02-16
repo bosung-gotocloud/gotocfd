@@ -23,7 +23,7 @@ The oscillating and rotating motion of the airfoil is modeled using the custom [
 ---
 
 ## Execution
-To run the simulation in an **OpenFOAM-v2512** environment, execute the following commands. The `decomposeParDict` is configured for 8 subdomains by default.
+To run the simulation in an **OpenFOAM-v2512** environment, Add the `cyclicPitchMotion` solver to OpenFOAM-v2512 according to the instruction in https://github.com/bosung-gotocloud/gotocfd/tree/main/cyclicPitchMotionSolver. Aand execute the following commands. The `decomposeParDict` is configured for 8 subdomains by default.
 
 ```bash
 cd case
@@ -39,3 +39,4 @@ mpirun -np 8 pimpleFoam -parallel
 
 
 [2] Lee, B., Lee, S. and Lee, D. H., “Modification of SST Turbulence Model for Computation of Oscillating Airfoil Flows,“ Journal of computational fluids engineering, Vol. 4, No. 3, 1999, pp. 44~51.
+

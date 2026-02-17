@@ -1,5 +1,7 @@
+# Build OpenFOAM on WSL Ubuntu GUI desktop
+
 Setting up a Linux environment can feel like stepping into another world if you have spent your life in the Windows ecosystem. While [cross-compiled OpenFOAM binaries](https://www.openfoam.com/openfoam-mingw-cross-compilation) are available for Windows, they often lack the full feature set or stability of a native Linux build. [Using WSL (Windows Subsystem for Linux)](https://www.openfoam.com/download/openfoam-installation-on-windows-10) is the industry standard, yet the "black screen and white text" of the Command Line Interface (CLI) remains a major hurdle for many newcomers.
 To bridge this gap, this guide provides a simplified, step-by-step approach to building a GUI-enabled OpenFOAM-v2512 environment on Windows. By following these steps, you can enjoy the power of Linux solvers with the visual comfort of a desktop interface.
 
-- wsl_ubuntu_rdp.md: Guide for setting up WSL Ubuntu Linux with Remote Desktop
-- build_OpenFOAM-v2512_on_Ubuntu.md: Guide for installaing OpenFOAM-v2512 on an Ubuntu Linux system
+- [wsl_ubuntu_rdp.md](https://github.com/bosung-gotocloud/gotocfd/blob/main/OpenFOAM_on_Ubuntu/wsl_ubuntu_rdp.md): Guide for setting up WSL Ubuntu Linux with Remote Desktop
+- [build_OpenFOAM-v2512_on_Ubuntu.md](https://github.com/bosung-gotocloud/gotocfd/blob/main/OpenFOAM_on_Ubuntu/build_OpenFOAM-v2512_on_Ubuntu.md): Guide for installaing OpenFOAM-v2512 on an Ubuntu Linux system

@@ -8,6 +8,7 @@ The flow field surrounding an oscillating airfoil in deep stall is characterized
  The simulation parameters are defined to capture unsteady aerodynamic effects at a high Reynolds number and moderate Mach number:
 
 * **Mach Number:** $M_{\infty} = 0.283$
+  
   \t**Note:** In real conditions, compressibility effects occur in the suction region of the airfoil. A compressible solver may therefore be required; however, this example is intended for the validation of transient mesh motion.
 * **Reynolds Number:** $Re = 3.45 \times 10^6$
 * **Angle of Attack:** $\alpha(t) = 15^\circ + 10^\circ \sin(\omega t)$  
@@ -42,6 +43,7 @@ mpirun -np 8 pimpleFoam -parallel
 
 
 [2] Lee, B., Lee, S. and Lee, D. H., “Modification of SST Turbulence Model for Computation of Oscillating Airfoil Flows,“ Journal of computational fluids engineering, Vol. 4, No. 3, 1999, pp. 44~51.
+
 
 
 

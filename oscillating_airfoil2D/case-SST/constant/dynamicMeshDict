@@ -1,0 +1,33 @@
+FoamFile
+{
+ version 2.0;
+ format ascii;
+ class dictionary;
+ location constant;
+ object dynamicMeshDict;
+}
+
+dynamicFvMesh dynamicMotionSolverListFvMesh;
+motionSolverLibs
+  (
+    "libfvMotionSolvers.so"
+  );
+motionSolver fvMotionSolvers;
+solvers
+{
+  cyclicPitch
+  {
+    solver solidBody;
+    solidBodyMotionFunction cyclicPitchMotion;
+    cellZone airfoilzone;
+    cyclicPitchMotionCoeffs
+    {
+      origin (0 0 0);
+      amplitude 10;
+      axis (0 1 0);
+      omega 29.34;
+      phase 0;
+      alpha0 15;
+    }
+  }
+}

@@ -19,7 +19,7 @@ The oscillating and rotating motion of the airfoil is modeled using the custom [
 * **Time Step ($\Delta t$):** $0.00107 \text{ s}$ (200 steps per oscillation period).
 * **Duration:** 10 full oscillation periods to achieve a periodic steady state.
 * **Mesh Resolution:** First cell height is $1 \times 10^{-4} \text{ m}$ to resolve the boundary layer.
-* **Turbulence Model:** Spalart–Allmaras turbulence model
+* **Turbulence Model:** Spalart–Allmaras or k-Omega SST turbulence model
 
 ---
 
@@ -27,7 +27,8 @@ The oscillating and rotating motion of the airfoil is modeled using the custom [
 To run the simulation in an **OpenFOAM-v2512** environment, Add the `cyclicPitchMotion` solver to OpenFOAM-v2512 according to the instruction in https://github.com/bosung-gotocloud/gotocfd/tree/main/cyclicPitchMotionSolver. And execute the following commands. The `decomposeParDict` is configured for 8 subdomains by default.
 
 ```bash
-cd case
+cd case-SA # SA turbulence model
+cd case-SST # SST turbulence model
 # Partition the mesh for parallel processing
 decomposePar
 

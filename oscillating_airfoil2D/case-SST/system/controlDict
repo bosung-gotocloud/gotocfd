@@ -1,0 +1,83 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|                                                                             |
+|    HiSA: High Speed Aerodynamic solver                                      |
+|    Copyright (C) 2014-2017 Johan Heyns - CSIR, South Africa                 |
+|    Copyright (C) 2014-2017 Oliver Oxtoby - CSIR, South Africa               |
+|                                                                             |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version         2.0;
+    format          ascii;
+    class           dictionary;
+    location        "system";
+    object          controlDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application       pimpleFoam;
+
+startFrom         startTime;
+
+startTime         0;
+
+stopAt            endTime;
+
+endTime           2.14;  // 1 revolution = 0.214 sec, 10 revolution
+
+deltaT            0.00107;  // 200 steps per revolution
+
+writeControl      runTime;
+
+writeInterval     0.0107;
+
+purgeWrite        0;
+
+writeFormat       ascii;
+
+writePrecision    6;
+
+writeCompression  off;
+
+timeFormat        general;
+
+timePrecision     6;
+
+graphFormat       raw;
+
+runTimeModifiable yes;
+
+functions
+{
+    forces
+    {
+        type            forceCoeffs;
+        libs            ( "libforces.so" );
+        writeControl    timeStep;
+        writeInterval   1;
+
+        patches
+        (
+            airfoil_surface
+        );
+    	coefficients
+      	(
+        	Cd
+        	Cl
+        	CmPitch
+      	);
+        log         true;
+        rhoInf      1.225;
+        rho         rhoInf;
+        CofR        (0 0 0);
+        liftDir     (0 0 1);
+        dragDir     (1 0 0);
+        pitchAxis   (0 1 0);
+        magUInf     97.958176;
+        lRef        1;
+        Aref        1;
+    }
+}
+
+// ************************************************************************* //

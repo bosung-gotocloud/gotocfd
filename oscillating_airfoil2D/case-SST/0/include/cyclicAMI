@@ -1,0 +1,8 @@
+  airfoilzone_surface
+  {
+    type cyclicAMI;
+  }
+  airfoilzone_surface_slave
+  {
+    type cyclicAMI;
+  }

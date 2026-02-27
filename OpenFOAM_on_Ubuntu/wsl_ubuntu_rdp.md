@@ -252,7 +252,7 @@ sudo apt-get install -y '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrend
 Once you have downloaded the .tar.gz archive from the official website and follow these steps:
 
 
-** Create the Installation Directory**
+**Create the Installation Directory**
   
 It is best practice to install manually managed software under /opt. Use the following commands to create the directory and extract the archive:
 

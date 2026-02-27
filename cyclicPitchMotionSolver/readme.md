@@ -97,7 +97,7 @@ cd $WM_PROJECT_DIR
 ```
 
 ### 4. Usage in `dynamicMeshDict`
-To apply the solver to your simulation, define the cyclicPitchMotion function within the constant/dynamicMeshDict file.Configuration ExampleThe following entry defines a cyclic pitch motion centered at the origin (0, 0, 0). Based on the provided equations, the blade pitch will oscillate between a maximum angle of $(\theta_0 + A)$ and a minimum angle of $(\theta_0 - A)$.
+To apply the solver to your simulation, define the cyclicPitchMotion function within the `constant/dynamicMeshDict` file.Configuration ExampleThe following entry defines a cyclic pitch motion centered at the origin (0, 0, 0). Based on the provided equations, the blade pitch will oscillate between a maximum angle of $(\theta_0 + A)$ and a minimum angle of $(\theta_0 - A)$.
 
 ```
 dynamicFvMesh   dynamicSolidBodyMotionFvMesh;

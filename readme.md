@@ -9,3 +9,5 @@
 - [**oscillating_airfoil2D**](https://github.com/bosung-gotocloud/gotocfd/tree/main/oscillating_airfoil2D): cyclicPitchMotion example case using pimpleFoam solver
   
 - [**salomeToOpenFOAM**](https://github.com/bosung-gotocloud/gotocfd/tree/main/salomeToOpenFOAM): export salome mesh with cellZones to OpenFOAM
+
+- [**stepROBIN**](https://github.com/bosung-gotocloud/gotocfd/tree/main/stepROBIN): a Python utility designed to generate the **NASA ROBIN (Rotor Body Interaction)** fuselage and pylon geometry in **STEP format (.step)**
